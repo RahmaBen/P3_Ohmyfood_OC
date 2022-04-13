@@ -1,0 +1,153 @@
+// partie functions btn 
+.functions {
+
+    margin: 50px 0;
+
+    &__container {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        background-color: $color-grey-light;
+        border-radius: 20px;
+        box-shadow: 0 0 10px 0 $color-shadow;
+        transition: background-color 300ms ease;
+        width: 27%;
+        padding: 10px;
+        cursor: pointer;
+
+
+        & p {
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        &:hover {
+            background: $color-btn-hover;
+            box-shadow: 3px 3px 3px $color-shadow;
+            transition: background-color 1s;
+
+            .icon {
+                color: $color-primary;
+            }
+        }
+
+    }
+
+    .number {
+        width: 30px;
+        height: 30px;
+        background-color: $color-primary;
+        border-radius: 50%;
+        margin-left: -25px;
+        color: $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon {
+        padding: 20px;
+        font-size: 25px;
+        color: $color-icon;
+
+
+    }
+
+    // version mobile
+    @media all and(max-width: 767px) {
+        &__container {
+            // width: 100%;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 20px;
+
+        }
+
+        &__btn {
+            width: 85%;
+            padding: 0px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// partie des cartes restaurants 
+.restaurants {
+    background-color: $color-grey-light;
+    padding: 16px 0;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        & a {
+            width: 45%;
+            margin: 2%;
+
+        }
+    }
+
+    &__card {
+        border-radius: 20px;
+        box-shadow: 0 0 20px $color-shadow;
+        background-color: $color-white;
+
+        &__image {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            object-fit: cover;
+            width: 100%;
+            height: 230px;
+        }
+
+        &__body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px 5px;
+            line-height: 2px;
+        }
+
+        &__like {
+            font-size: 35px;
+            padding: 0 15px;
+
+            .heart {
+                &:hover {
+                    animation: heart 1000ms forwards;
+                }
+
+            }
+
+        }
+    }
+
+    // version mobile
+    @media all and(max-width: 767px) {
+
+        &__container {
+            flex-direction: column;
+            align-items: center;
+
+
+            & a {
+                width: 85%;
+
+            }
+        }
+
+        &__card {
+            &__image {
+                height: 150px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,72 @@
+header {
+    text-align: center;
+
+}
+
+.logo__container {
+    margin: 15px;
+}
+
+.logo {
+    width: 200px;
+    height: 45px;
+}
+
+.adress__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(234, 234, 234);
+    padding: 20px 0;
+    box-shadow: inset 0px 8px 8px -3px $color-shadow;
+}
+
+.location__Icon {
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.location__adress {
+    padding-left: 13px;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.informations {
+    background-color: $color-grey-light;
+    padding: 40px 0;
+
+    & h2 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    & p {
+        padding-bottom: 20px;
+        font-size: 16px;
+        opacity: 0.7;
+    }
+}
+
+.btn {
+
+    @include linear-gradient;
+    box-shadow: 0 0 10px 0 $color-shadow;
+    font-weight: 500;
+    padding: 16px;
+    border-radius: 50px;
+    border: none;
+    color: $color-white;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: box-shadow 300ms ease;
+        box-shadow: 0 0 16px 0 rgb(120, 120, 120, 0.5);
+        opacity: 0.9;
+
+    }
+}
