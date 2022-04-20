@@ -1,17 +1,52 @@
-@keyframes heart {
-    from {
-        opacity: 0;
-        color: $color-primary;
+// animation loading
+@keyframes dots {
 
-    }
-
-    10% {
-        font-weight: 600;
-    }
-
-    to {
-        font-weight: 600;
+    50% {
         opacity: 1;
-        color: $color-primary;
+        transform: scale(0.7) translateY(20px);
+    }
+}
+
+@keyframes hideLoader {
+    100% {
+        opacity: 0;
+        display: none;
+        z-index: -1
+    }
+}
+
+// animation de coeur
+
+@keyframes heart {
+    0% {
+        font-weight: 800;
+        @include linear-gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.1;
+    }
+
+    100% {
+        font-weight: 800;
+        @include linear-gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+// animation nouveau
+@keyframes new {
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

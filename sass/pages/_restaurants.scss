@@ -1,0 +1,74 @@
+.logo__container {
+
+    position: relative;
+
+    &__link {
+        font-size: 30px;
+        position: absolute;
+        left: 50px;
+        bottom: 5px;
+
+    }
+
+    @media all and(max-width: 767px) {
+
+        &__link {
+            font-size: 25px;
+            left: -10px;
+        }
+    }
+}
+
+.restaurants__img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.menu__restaurants {
+    background-color: $color-grey-light;
+    border-radius: 50px 50px 0 0;
+    width: 100%;
+    transform: translateY(-80px);
+    margin-bottom: -80px;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 32px 50px 0px;
+
+
+        h1 {
+            @include Shrikhand_font;
+            font-size: 35px;
+        }
+
+        .heart {
+            font-size: 50px;
+            cursor: pointer;
+
+            &:hover {
+                animation: heart 1500ms ease forwards;
+            }
+        }
+
+
+    }
+
+    @media all and(max-width: 767px) {
+        & {
+            padding: 32px 25px 0px;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .heart {
+            font-size: 30px;
+        }
+    }
+
+}

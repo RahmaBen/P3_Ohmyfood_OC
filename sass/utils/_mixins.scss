@@ -2,3 +2,7 @@
     background: linear-gradient(110deg, $color-primary 7%, $color-secondary 100%);
 
 }
+
+@mixin Shrikhand_font {
+    font-family: "Shrikhand", sans-serif;
+}

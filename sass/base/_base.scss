@@ -21,7 +21,7 @@ h3 {
 }
 
 h6 {
-    font-family: "Shrikhand", sans-serif;
+    @include Shrikhand_font;
     font-size: 20px;
 }
 
