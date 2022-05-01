@@ -95,14 +95,6 @@
     }
 }
 
-
-
-
-
-
-
-
-
 // partie functions btn 
 .functions {
 
@@ -112,6 +104,13 @@
         display: flex;
         justify-content: space-around;
         margin-bottom: 20px;
+
+        // version mobile
+        @include mobile (767px) {
+            flex-direction: column;
+            align-items: center;
+            margin-left: 20px;
+        }
 
     }
 
@@ -126,10 +125,22 @@
         padding: 10px;
         cursor: pointer;
 
+        // version mobile
+        @include mobile (767px) {
+            width: 85%;
+            padding: 0px;
+            margin-bottom: 20px;
+        }
 
         & p {
             font-weight: 600;
             font-size: 20px;
+
+            // version tablette
+            @include tablette(768px, 992px) {
+
+                font-size: 15px;
+            }
         }
 
         &:hover {
@@ -154,6 +165,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        // version mobile
+        @include mobile (767px) {
+            margin-left: -20px;
+        }
+
+
     }
 
     .icon {
@@ -161,25 +179,16 @@
         font-size: 25px;
         color: $color-icon;
 
+        // version tablette
+        @include tablette(768px, 992px) {
+
+            padding: 0 15px;
+        }
 
     }
 
-    // version mobile
-    @media all and(max-width: 767px) {
-        &__container {
-            // width: 100%;
-            flex-direction: column;
-            align-items: center;
-            margin-left: 20px;
 
-        }
 
-        &__btn {
-            width: 85%;
-            padding: 0px;
-            margin-bottom: 20px;
-        }
-    }
 }
 
 // partie des cartes restaurants 
@@ -192,9 +201,19 @@
         flex-wrap: wrap;
         justify-content: space-around;
 
+        @include mobile (767px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         & a {
             width: 45%;
             margin: 2%;
+
+            // version mobile
+            @include mobile (767px) {
+                width: 85%;
+            }
 
         }
     }
@@ -211,6 +230,11 @@
             object-fit: cover;
             width: 100%;
             height: 230px;
+
+            // version mobile
+            @include mobile (767px) {
+                height: 110px;
+            }
         }
 
         &__body {
@@ -231,6 +255,18 @@
             top: 19px;
             right: 10px;
             animation: new 4 1500ms ease-in-out 2s;
+
+            // version mobile
+            @include mobile (767px) {
+                padding: 0 5px;
+            }
+
+            // version mobile
+            p {
+                @include mobile (767px) {
+                    font-size: 12px;
+                }
+            }
         }
 
         &__like {
@@ -247,25 +283,6 @@
         }
     }
 
-    // version mobile
-    @media all and(max-width: 767px) {
 
-        &__container {
-            flex-direction: column;
-            align-items: center;
-
-
-            & a {
-                width: 85%;
-
-            }
-        }
-
-        &__card {
-            &__image {
-                height: 150px;
-            }
-        }
-    }
 
 }

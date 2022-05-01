@@ -6,3 +6,20 @@
 @mixin Shrikhand_font {
     font-family: "Shrikhand", sans-serif;
 }
+
+@mixin mobile ($_max-width) {
+    @media screen and (max-width: $_max-width) {
+        & {
+            @content;
+        }
+    }
+
+}
+
+@mixin tablette ($_min-width, $_max-width) {
+    @media all and (min-width: $_min-width) and (max-width: $_max-width) {
+        & {
+            @content;
+        }
+    }
+}

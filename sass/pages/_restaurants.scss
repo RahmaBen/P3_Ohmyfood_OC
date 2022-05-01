@@ -8,15 +8,16 @@
         left: 50px;
         bottom: 5px;
 
-    }
+        // version mobile
+        @include mobile (767px) {
 
-    @media all and(max-width: 767px) {
-
-        &__link {
             font-size: 25px;
             left: -10px;
+
         }
+
     }
+
 }
 
 .restaurants__img {
@@ -39,15 +40,43 @@
         justify-content: space-between;
         padding: 32px 50px 0px;
 
+        // version mobile
+        @include mobile (767px) {
+            & {
+                padding: 32px 25px 0px;
+            }
+        }
 
         h1 {
             @include Shrikhand_font;
             font-size: 35px;
+
+            // version mobile
+            @include mobile (767px) {
+                font-size: 23px;
+            }
+
+            // version tablette
+            @include tablette(768px, 992px) {
+
+                font-size: 30px;
+            }
         }
 
         .heart {
             font-size: 50px;
             cursor: pointer;
+
+            // version mobile
+            @include mobile (767px) {
+                font-size: 30px;
+            }
+
+            // version tablette
+            @include tablette(768px, 992px) {
+
+                font-size: 45px;
+            }
 
             &:hover {
                 animation: heart 1500ms ease forwards;
@@ -57,18 +86,169 @@
 
     }
 
-    @media all and(max-width: 767px) {
-        & {
-            padding: 32px 25px 0px;
-        }
+}
 
-        h1 {
-            font-size: 30px;
-        }
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
 
-        .heart {
-            font-size: 30px;
-        }
+    // version mobile
+    @include mobile (767px) {
+        flex-direction: column;
     }
 
+    &__items {
+        width: 32%;
+
+        // version mobile
+        @include mobile (767px) {
+            width: 100%;
+        }
+
+        h2 {
+            text-transform: uppercase;
+        }
+
+        .underline {
+            padding: 10px 30px;
+            border-top: 4px solid $color-tertiary;
+        }
+
+
+        &__btn {
+
+            background-color: $color-white;
+            border-radius: 20px;
+            box-shadow: 3px 3px 3px $color-shadow;
+            padding-top: 15px;
+            padding-left: 20px;
+            margin-bottom: 5%;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            overflow: hidden;
+
+
+
+            h3 {
+                font-size: 20px;
+                margin: 0px 0px 5px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                // version mobile
+                @include mobile (767px) {
+                    font-size: 17px;
+                }
+
+                // version tablette
+                @include tablette(768px, 992px) {
+
+                    font-size: 17px;
+                }
+            }
+
+            &__price {
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    margin: 0px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+
+                    // version mobile
+                    @include mobile (767px) {
+                        font-size: 15px;
+                    }
+
+                    // version tablette
+                    @include tablette(768px, 992px) {
+
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            &__container {
+                width: 200%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            &__check {
+                margin-top: -15px;
+                transform: translateX(100px);
+                // opacity: 0;
+                transition: all 700ms;
+                background-color: $color-tertiary;
+                height: 70px;
+                width: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-top-right-radius: 20px 20px;
+                border-bottom-right-radius: 20px 20px;
+
+                &__icon {
+                    height: 30px;
+                    width: 30px;
+                    background-color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100px;
+                    transform: rotate(-180deg);
+                    transition: transform 900ms;
+
+                    i {
+                        color: $color-tertiary;
+                    }
+                }
+            }
+
+            &:hover>&__check {
+                transform: translateX(5px);
+
+                // opacity: 1;
+
+
+                .menu__items__btn__check__icon {
+                    transition: transform 900ms;
+                    transform: rotate(-360deg);
+                }
+            }
+
+            &:hover>&__container {
+                width: 80%;
+                transition: all 500ms;
+
+            }
+
+        }
+
+    }
+
+
+    &__commander {
+        text-align: center;
+        padding: 35px 0 50px;
+        font-size: 20px;
+    }
+}
+
+.entrees {
+    animation: slide-in-top 1.5s backwards 0.75s;
+}
+
+.plats {
+    animation: slide-in-top 1.5s backwards 1s;
+}
+
+.dessert {
+    animation: slide-in-top 1.5s backwards 1.5s;
 }
