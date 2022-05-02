@@ -503,8 +503,7 @@ header {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  transform: rotate(-180deg);
-  transition: transform 900ms;
+  transform: rotate(180deg);
 }
 .menu__items__btn__check__icon i {
   color: #99E2D0;
@@ -514,7 +513,7 @@ header {
 }
 .menu__items__btn:hover > .menu__items__btn__check .menu__items__btn__check__icon {
   transition: transform 900ms;
-  transform: rotate(-360deg);
+  transform: rotate(360deg);
 }
 .menu__items__btn:hover > .menu__items__btn__container {
   width: 80%;
