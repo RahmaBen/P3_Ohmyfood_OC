@@ -144,7 +144,8 @@
         }
 
         &:hover {
-            background: $color-btn-hover;
+            background-color: darken($color-btn-hover, 15%);
+            // background: $color-btn-hover;
             box-shadow: 3px 3px 3px $color-shadow;
             transition: background-color 1s;
 

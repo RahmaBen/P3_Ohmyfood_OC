@@ -219,7 +219,7 @@ header {
   }
 }
 .functions__btn:hover {
-  background: #f7f0f7;
+  background-color: #dcbedc;
   box-shadow: 3px 3px 3px lightgrey;
   transition: background-color 1s;
 }
